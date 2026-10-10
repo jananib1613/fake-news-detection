@@ -1,0 +1,25 @@
+News,Prediction,Confidence,Sentiment,Words,Punctuation
+"1. Title: NASA Finds Water on Mars
+Text:
+NASA scientists have confirmed the presence of liquid water on the surface of Mars, raising hopes for the possibility of microbial life and future human colonization.
+
+",FAKE,0,Positive,34,5
+"Title: Government Launches COVID-19 Vaccination Drive
+Text: The Indian government has launched a nationwide vaccination drive to combat the COVID-19 pandemic. Healthcare workers are being vaccinated in the first phase, with plans to reach 300 million people by mid-year.
+",FAKE,0,Negative,39,8
+"Title: Obama Caught Funding Terrorists
+Text: Shocking news has surfaced that former President Barack Obama was secretly funding terrorist groups through fake charities. This information was allegedly leaked by an anonymous source in the FBI.
+
+",FAKE,0,Negative,35,4
+"Title: NASA Discovers Water on Mars
+Text:
+
+NASA scientists have found evidence of liquid water flowing on Mars. The discovery was made using high-resolution images from the Mars Reconnaissance Orbiter. This raises possibilities of microbial life existing on the red planet.",FAKE,0,Neutral,41,6
+"Title: Fed holds interest rates steady, lowers 2019 projection to two hikes
+
+Text: The Federal Reserve held interest rates steady Wednesday and lowered its forecast to two hikes in 2019. This marks a shift from the earlier prediction of three hikes, citing global economic uncertainty.
+",FAKE,0,Positive,45,6
+"Title: Fed holds interest rates steady, lowers 2019 projection to two hikes
+
+Text: The Federal Reserve held interest rates steady Wednesday and lowered its forecast to two hikes in 2019. This marks a shift from the earlier prediction of three hikes, citing global economic uncertainty.
+",FAKE,0,Positive,45,6

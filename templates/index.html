@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Fake News Detection</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body class="light-mode">
+    <div class="container">
+        <h1>📰 Fake News Detector</h1>
+
+        <!-- Toggle Button -->
+        <button onclick="toggleTheme()" class="toggle-btn">Toggle Dark/Light</button>
+
+        <!-- Form -->
+        <form method="POST" action="/">
+            <label for="title">News Title:</label><br>
+            <input type="text" id="title" name="title" required><br>
+
+            <label for="content">News Content:</label><br>
+            <textarea id="content" name="content" rows="6" required></textarea><br>
+
+            <button type="submit">Check News</button>
+        </form>
+
+        <!-- Result -->
+        {% if prediction %}
+            <div class="result {{ prediction }}">
+                <h2>Prediction: {{ prediction.upper() }}</h2>
+                <p><strong>Confidence:</strong> {{ confidence }}%</p>
+                <p><strong>Sentiment:</strong> {{ sentiment }}</p>
+            </div>
+        {% endif %}
+
+        <!-- History -->
+        {% if history %}
+            <div class="history">
+                <h3>🔁 Prediction History</h3>
+                <ul>
+                    {% for item in history %}
+                        <li><strong>{{ item.title }}</strong>: {{ item.prediction.upper() }} ({{ item.confidence }}%)</li>
+                    {% endfor %}
+                </ul>
+                <form method="POST" action="/clear">
+                    <button type="submit" class="clear-btn">Clear History</button>
+                </form>
+            </div>
+        {% endif %}
+    </div>
+
+    <!-- Theme Toggle Script -->
+    <script>
+        function toggleTheme() {
+            const body = document.body;
+            body.classList.toggle('dark-mode');
+            body.classList.toggle('light-mode');
+        }
+    </script>
+</body>
+</html>
